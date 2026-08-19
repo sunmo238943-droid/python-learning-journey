@@ -1,419 +1,410 @@
 # Python Learning Journey
 
-这是我的 Python 学习与实践仓库。
+记录我的 Python 学习过程、每日练习与阶段性项目。
 
-**开始时间：2026-08-14**
-
-当前职业学习方向已调整为：
-
-> **嵌入式 / 板级硬件工程师**
-
-因此 Python 不再作为主要开发语言深入学习，而是定位为：
-
-> **硬件开发、数据采集、测试自动化和数据分析的辅助工具。**
+当前学习方式以 **持续练习 + GitHub 记录 + 小项目验证** 为主，在学习基础语法的同时逐步建立编程思维，并为后续数据处理、自动化、工程开发等方向打基础。
 
 ---
 
-## 学习目标
+## 🎯 学习目标
 
-### 基础阶段
+* 系统掌握 Python 基础语法
+* 建立基本的程序设计思维
+* 熟悉变量、条件、循环、列表、函数等核心知识
+* 通过小练习巩固每日学习内容
+* 逐步完成能够独立运行的小项目
+* 保持 GitHub 持续提交记录
+* 后续逐步学习文件处理、模块、异常处理、面向对象等内容
 
-掌握完成硬件辅助开发所需的 Python 基础：
+---
 
-* 变量与基本数据类型
-* 输入与输出
+## 🛠️ 学习环境
+
+* 操作系统：Windows
+* Python：3.12
+* 编辑器：Visual Studio Code
+* 版本管理：Git
+* 代码托管：GitHub
+
+---
+
+## 📚 当前学习进度
+
+| Day     | 学习内容                                       | 状态 |
+| ------- | ------------------------------------------ | -- |
+| Day 001 | Python 基础、变量、输入输出、基础运算                     | ✅  |
+| Day 002 | 条件判断 `if / elif / else`                    | ✅  |
+| Day 003 | `for / while / range()`、循环与嵌套循环            | ✅  |
+| Day 004 | `while True / break`、`list` 列表、索引、切片、查找与遍历 | ✅  |
+
+---
+
+# Day 001
+
+## 学习内容
+
+* Python 程序基本结构
+* `print()`
+* 变量
+* 基本数据类型
+* `input()`
+* `int()` / `float()`
+* 基础算术运算
+* 简单程序编写
+
+## 练习目标
+
+能够完成：
+
+```python
+输入
+↓
+数据转换
+↓
+计算
+↓
+输出
+```
+
+这一最基础的程序流程。
+
+---
+
+# Day 002
+
+## 学习内容
+
+* `if`
+* `elif`
+* `else`
+* 比较运算
 * 条件判断
-* `for / while` 循环
-* `list / tuple / dict`
-* 函数
-* 模块
-* 文件读写
-* 异常处理
-* CSV
-* 基础 Matplotlib
+* 多分支程序
+* 用户输入与条件判断结合
 
-### 后续应用阶段
+## 核心结构
 
-重点将 Python 用于：
+```python
+if 条件:
+    ...
 
-```text
-STM32 / 传感器
-        ↓
-      UART
-        ↓
-      Python
-        ↓
- ┌──────┼──────┐
- ↓      ↓      ↓
-CSV   Plot   Test
-存储   绘图   自动化
+elif 条件:
+    ...
+
+else:
+    ...
 ```
 
-最终能够独立编写：
+目标是能够根据不同输入执行不同程序逻辑。
+
+---
+
+# Day 003
+
+## 学习内容
+
+* `for`
+* `while`
+* `range()`
+* 循环变量
+* 循环计数
+* 嵌套循环
+
+## 已完成练习
+
+### `sum_100.py`
+
+使用 `for` 循环计算：
 
 ```text
-serial_logger.py
-    串口数据采集 → CSV
+1 + 2 + ... + 100
+```
 
-plot_sensor.py
-    传感器数据 → 曲线
+### `table99.py`
 
-realtime_plot.py
-    串口数据 → 实时绘图
+使用嵌套循环打印九九乘法表。
 
-test_report.py
-    测试数据 → 自动整理
+### `countdown.py`
+
+实现：
+
+```text
+10
+9
+8
+...
+1
+点火！
+```
+
+并练习：
+
+```python
+range(start, stop, step)
+```
+
+中的负步长。
+
+---
+
+# Day 004
+
+## 学习内容
+
+### 循环控制
+
+* `while True`
+* `break`
+* 无限循环
+* 满足条件后主动退出循环
+
+### 猜数字游戏
+
+完成：
+
+```text
+随机生成 1～100 的整数
+↓
+用户不断猜测
+↓
+猜大 → 提示“大了”
+猜小 → 提示“小了”
+猜中 → 输出猜测次数并退出
+```
+
+涉及：
+
+```python
+import random
+random.randint()
+while True
+break
 ```
 
 ---
 
-## 学习资料
+## List 列表
 
-主要参考：
+学习：
 
-* `jackfrued/Python-100-Days`
-* Python 官方文档
+```python
+fruits = ["apple", "banana", "orange"]
+```
 
-开发工具：
+### 已掌握操作
 
-* Python 3.12.10
-* VS Code
-* Git
-* GitHub
-* Codex / ChatGPT
+创建列表：
 
-AI 主要用于：
+```python
+shopping_list = ["milk", "bread", "egg"]
+```
 
-* 解释代码
-* 分析报错
-* 提供提示
-* 检查练习
+读取元素：
 
-尽量避免直接使用 AI 代写完整练习。
+```python
+shopping_list[0]
+```
+
+修改元素：
+
+```python
+shopping_list[1] = "apple"
+```
+
+添加：
+
+```python
+shopping_list.append("apple")
+```
+
+删除：
+
+```python
+shopping_list.remove("bread")
+```
+
+获取长度：
+
+```python
+len(shopping_list)
+```
+
+遍历：
+
+```python
+for item in shopping_list:
+    print(item)
+```
 
 ---
 
-## 仓库结构
+## 索引
+
+正向索引：
+
+```text
+0  1  2  3 ...
+```
+
+负向索引：
+
+```text
+... -3 -2 -1
+```
+
+例如：
+
+```python
+numbers[-1]
+```
+
+表示列表最后一个元素。
+
+---
+
+## 切片
+
+基本结构：
+
+```python
+list[start:end]
+```
+
+遵循：
+
+> 包含开始位置，不包含结束位置。
+
+例如：
+
+```python
+numbers[1:4]
+numbers[:3]
+numbers[2:]
+```
+
+---
+
+## 列表查找
+
+已经学习：
+
+```python
+in
+not in
+```
+
+例如：
+
+```python
+if name in students:
+    ...
+```
+
+获取元素下标：
+
+```python
+students.index(name)
+```
+
+已经能够组合：
+
+```text
+input
++
+if / else
++
+list
++
+in
++
+index()
+```
+
+完成简单的数据查询程序。
+
+---
+
+## 📂 当前目录结构
 
 ```text
 python-learning-journey/
-├── notes/          # 每日学习笔记
-├── exercises/      # 每日 Python 练习
+│
+├── exercises/
 │   ├── day001/
 │   ├── day002/
 │   ├── day003/
-│   └── ...
-├── projects/       # 阶段应用项目
+│   └── day004/
+│
+├── notes/
+├── projects/
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## 当前学习进度
+## 🚀 下一步
 
-| Day     | 学习内容                            | 状态 |
-| ------- | ------------------------------- | -- |
-| Day 001 | 环境、变量、数据类型、输入输出、类型转换            | ✅  |
-| Day 002 | 比较运算、逻辑运算、`if / elif / else`    | ✅  |
-| Day 003 | `for / while / range()`、循环与嵌套循环 | ⏳  |
-| Day 004 | `list` 列表                       | ⬜  |
-| Day 005 | `dict / tuple`                  | ⬜  |
-| Day 006 | 函数                              | ⬜  |
-| Day 007 | 模块                              | ⬜  |
-| Day 008 | 文件读写                            | ⬜  |
-| Day 009 | 异常处理                            | ⬜  |
-| Day 010 | CSV 数据处理                        | ⬜  |
-| Day 011 | Matplotlib 基础绘图                 | ⬜  |
-| Day 012 | Python 基础综合练习                   | ⬜  |
+Python 下一阶段继续学习列表相关操作：
 
----
+* `sort()`
+* `reverse()`
+* `min()`
+* `max()`
+* `sum()`
 
-## Day 001
+随后逐步进入：
 
-已掌握：
-
-* Python 运行环境
-* `print()`
-* 变量
-* `int`
-* `float`
-* `str`
-* `bool`
-* `type()`
-* `input()`
-* 类型转换
-* f-string
-* 基础数学运算
-* `ValueError` 基础排查
-
-已完成：
-
-```text
-hello.py
-basics.py
-input_demo.py
-personal_info.py
-next_age.py
-rectangle.py
-temperature.py
-bmi.py
-```
+* 字典 `dict`
+* 元组 `tuple`
+* 集合 `set`
+* 函数
+* 文件读写
+* 异常处理
+* 模块
+* 面向对象
+* 小型综合项目
 
 ---
 
-## Day 002
+## 📌 当前学习路线
 
-已学习：
+目前整体学习路线调整为：
 
 ```text
->
-<
->=
-<=
-==
-!=
-
-if
-elif
-else
-
-and
-or
-not
+Embedded C 为主
+        ↓
+Python 为辅
+        ↓
+逐步加入电子与硬件基础
 ```
 
-能够根据不同条件控制程序执行不同逻辑。
+Python 不停止学习，但控制每日学习量，以持续练习和巩固为主。
 
 ---
 
-## Day 003
+## 🔄 Git 学习记录
 
-当前学习：
+每个学习日完成后：
 
-```text
-for
-while
-range()
-循环变量
-累加
-倒序循环
-嵌套循环
-```
-
-当前练习：
-
-```text
-sum_100.py
-    for循环求 1 + 2 + ... + 100
-
-table99.py
-    双重for循环打印九九乘法表
-
-countdown.py
-    使用range负步长完成倒计时
-```
-
-重点理解：
-
-```python
-range(start, stop, step)
-```
-
-以及：
-
-```python
-total += i
-```
-
-等价于：
-
-```python
-total = total + i
-```
-
----
-
-## Python 基础阶段路线
-
-```text
-变量 / 数据类型
-        ✅
-        ↓
-条件判断
-        ✅
-        ↓
-循环
-        ⏳
-        ↓
-list / dict / tuple
-        ↓
-函数
-        ↓
-模块
-        ↓
-文件
-        ↓
-异常处理
-        ↓
-CSV
-        ↓
-Matplotlib
-        ↓
-Python基础阶段结束
-```
-
-基础阶段结束后，不继续系统深入 Web、爬虫或复杂 Python 工程化内容。
-
----
-
-## Python × 硬件路线
-
-后续 Python 学习直接服务于硬件主线：
-
-```text
-Python基础
-    ↓
-文件 / CSV
-    ↓
-pyserial
-    ↓
-串口读取
-    ↓
-STM32数据采集
-    ↓
-CSV保存
-    ↓
-Matplotlib绘图
-    ↓
-实时数据显示
-    ↓
-测试自动化
-    ↓
-多参数采集系统上位机
-```
-
----
-
-## 暂不学习
-
-当前阶段暂不投入时间学习：
-
-```text
-Django
-Flask
-FastAPI
-Web开发
-复杂爬虫
-异步编程
-复杂OOP
-机器学习框架
-高级Python工程化
-```
-
-需要时再按项目需求补充。
-
----
-
-## 与 C / 硬件学习的关系
-
-当前整体优先级：
-
-```text
-C语言 / Embedded C
-        ↓
-电子与电路基础
-        ↓
-STM32
-        ↓
-接口与传感器
-        ↓
-PCB / 仪器 / Debug
-        ↓
-完整硬件项目
-
-Python
-   └────────→ 数据采集 / 绘图 / 自动测试 / 上位机
-```
-
-Python 是工具，C 和硬件开发是当前主线。
-
----
-
-## 最终 Python 验收目标
-
-基础阶段结束时，应能够：
-
-* 独立阅读基础 Python 程序
-* 使用条件和循环完成简单逻辑
-* 使用列表和字典处理数据
-* 自己编写函数
-* 读取和写入文件
-* 处理基础异常
-* 读取和生成 CSV
-* 使用 Matplotlib 绘制实验数据
-* 根据文档安装并使用第三方库
-
-硬件应用阶段进一步完成：
-
-* [ ] `serial_logger.py`
-* [ ] `plot_sensor.py`
-* [ ] `realtime_plot.py`
-* [ ] `test_report.py`
-
----
-
-## 每日学习流程
-
-```text
-学习一个知识点
-       ↓
-自己敲代码
-       ↓
-运行
-       ↓
-观察结果
-       ↓
-出现问题则 Debug
-       ↓
-完成独立练习
-       ↓
-更新 README / notes
-       ↓
-git commit
-       ↓
+```bash
+git status
+git add .
+git commit -m "Complete Python Day XXX"
 git push
 ```
 
----
-
-## 学习原则
-
-1. 先预测程序输出，再运行验证。
-2. 代码尽量自己手敲。
-3. 遇到错误先阅读完整报错。
-4. AI 优先提供解释和提示，不直接代替思考。
-5. 每个知识点必须通过实际代码验证。
-6. Python 学习不追求“大而全”，以硬件开发够用为标准。
-7. 后期所有 Python 项目优先服务 STM32、传感器、测试和数据分析。
-8. 每个学习日保留 GitHub 提交记录。
+通过 GitHub 持续记录整个学习过程。
 
 ---
 
-## 当前下一步
+## ✅ 当前状态
 
-**Python Day 003：循环**
+```text
+Python Day 001 ✅
+Python Day 002 ✅
+Python Day 003 ✅
+Python Day 004 ✅
+```
 
-完成：
-
-* [x] `sum_100.py`
-* [x] `table99.py`
-* [x] `countdown.py`
-
-三道练习全部通过后，进入：
-
-> **Python Day 004 — list 列表**
-
-同时主要学习精力继续投入：
-
-> **Embedded C + 电子硬件基础**
+持续更新中。
